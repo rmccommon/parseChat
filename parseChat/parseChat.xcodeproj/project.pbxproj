@@ -10,12 +10,15 @@
 		09795B5D618A6D4E9C6BC86D /* Pods_parseChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25B397F713E3A37B4329F476 /* Pods_parseChatUITests.framework */; };
 		2B28A1AA2095759A46C4C8AA /* Pods_parseChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB16D7BBD088A64797BF4FE9 /* Pods_parseChatTests.framework */; };
 		AAFFB070216553250057235C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFFB06F216553250057235C /* AppDelegate.swift */; };
-		AAFFB072216553250057235C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFFB071216553250057235C /* ViewController.swift */; };
+		AAFFB072216553250057235C /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFFB071216553250057235C /* loginViewController.swift */; };
 		AAFFB075216553250057235C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAFFB073216553250057235C /* Main.storyboard */; };
 		AAFFB077216553280057235C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAFFB076216553280057235C /* Assets.xcassets */; };
 		AAFFB07A216553280057235C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAFFB078216553280057235C /* LaunchScreen.storyboard */; };
 		AAFFB085216553280057235C /* parseChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFFB084216553280057235C /* parseChatTests.swift */; };
 		AAFFB090216553280057235C /* parseChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFFB08F216553280057235C /* parseChatUITests.swift */; };
+		AAFFB0AC216937DD0057235C /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFFB0AB216937DD0057235C /* mainViewController.swift */; };
+		AAFFB0AE216945130057235C /* messageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFFB0AD216945130057235C /* messageCell.swift */; };
+		AAFFB0B0216951770057235C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFFB0AF216951770057235C /* Message.swift */; };
 		C75F0100E24C855FEE2B966D /* Pods_parseChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A83E6F5232B8AAD7355A4E /* Pods_parseChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +48,7 @@
 		8E1BB4A2E96E75DCC333C5A0 /* Pods-parseChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-parseChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-parseChat/Pods-parseChat.debug.xcconfig"; sourceTree = "<group>"; };
 		AAFFB06C216553250057235C /* parseChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = parseChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAFFB06F216553250057235C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AAFFB071216553250057235C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AAFFB071216553250057235C /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		AAFFB074216553250057235C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AAFFB076216553280057235C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAFFB079216553280057235C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +59,9 @@
 		AAFFB08B216553280057235C /* parseChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = parseChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAFFB08F216553280057235C /* parseChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parseChatUITests.swift; sourceTree = "<group>"; };
 		AAFFB091216553280057235C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAFFB0AB216937DD0057235C /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
+		AAFFB0AD216945130057235C /* messageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messageCell.swift; sourceTree = "<group>"; };
+		AAFFB0AF216951770057235C /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		CB34BF7EDB2D053B8297ADCA /* Pods-parseChatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-parseChatUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-parseChatUITests/Pods-parseChatUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E2CFDAEC30CAFD2E799A791D /* Pods-parseChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-parseChatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-parseChatTests/Pods-parseChatTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FB16D7BBD088A64797BF4FE9 /* Pods_parseChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_parseChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,8 +144,11 @@
 			isa = PBXGroup;
 			children = (
 				AAFFB06F216553250057235C /* AppDelegate.swift */,
-				AAFFB071216553250057235C /* ViewController.swift */,
+				AAFFB071216553250057235C /* loginViewController.swift */,
 				AAFFB073216553250057235C /* Main.storyboard */,
+				AAFFB0AD216945130057235C /* messageCell.swift */,
+				AAFFB0AF216951770057235C /* Message.swift */,
+				AAFFB0AB216937DD0057235C /* mainViewController.swift */,
 				AAFFB076216553280057235C /* Assets.xcassets */,
 				AAFFB078216553280057235C /* LaunchScreen.storyboard */,
 				AAFFB07B216553280057235C /* Info.plist */,
@@ -301,15 +310,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-parseChatUITests-checkManifestLockResult.txt",
 			);
@@ -323,16 +328,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-parseChat/Pods-parseChat-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
@@ -347,15 +348,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-parseChat-checkManifestLockResult.txt",
 			);
@@ -369,15 +366,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-parseChatTests-checkManifestLockResult.txt",
 			);
@@ -393,8 +386,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAFFB072216553250057235C /* ViewController.swift in Sources */,
+				AAFFB072216553250057235C /* loginViewController.swift in Sources */,
+				AAFFB0AE216945130057235C /* messageCell.swift in Sources */,
+				AAFFB0B0216951770057235C /* Message.swift in Sources */,
 				AAFFB070216553250057235C /* AppDelegate.swift in Sources */,
+				AAFFB0AC216937DD0057235C /* mainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

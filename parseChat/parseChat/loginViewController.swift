@@ -8,7 +8,7 @@
 import Parse
 import UIKit
 
-class ViewController: UIViewController {
+class loginViewController: UIViewController {
 
     
     @IBOutlet weak var usernameField: UITextField!
@@ -30,25 +30,36 @@ class ViewController: UIViewController {
     @IBAction func signUpClick(_ sender: Any)
     {
         let newUser = PFUser()
+        if(usernameField.text! == "" || passwordField.text! == ""){
+            let misingInputalert = UIAlertController(title: "Missing Input", message: "Username or password is empty", preferredStyle: .alert)
+            let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                
+            }
+            misingInputalert.addAction(OKAction)
+            present(misingInputalert, animated: true)
+        }else{
         
         // set user properties
-        newUser.username = usernameField.text!
-        newUser.password = passwordField.text!
-        print(newUser.username!)
-        print(newUser.password!)
+        newUser.username = usernameField.text
+        newUser.password = passwordField.text
         
         // call sign up function on the object
         newUser.signUpInBackground { (success: Bool, error: Error?) in
             if let error = error {
-                print("HRERE")
-                print(error.localizedDescription)
+                let errorAlert = UIAlertController(title:"Error", message: error.localizedDescription, preferredStyle: .alert)
+                let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                    
+                }
+                errorAlert.addAction(OKAction)
+                
+                self.present(errorAlert, animated: true)
             } else {
                 print("User Registered successfully")
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
                 // manually segue to logged in view
             }
         }
-        
+        }
         
         
     }

@@ -18,9 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         Parse.initialize(with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) in
-            configuration.applicationId = "parseChat"
-            configuration.clientKey = "typingGoodThoughts"  // set to nil assuming you have not set clientKey
-            configuration.server = "http://parseChat.herokuapp.com/parse"
+            configuration.applicationId = "myAppId"
+            configuration.clientKey = "myMasterKey"  // set to nil assuming you have not set clientKey
+            configuration.server = "https://pleaseparsechat.herokuapp.com/parse/"
         }))
         
         return true
