@@ -22,6 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             configuration.clientKey = "myMasterKey"  // set to nil assuming you have not set clientKey
             configuration.server = "https://pleaseparsechat.herokuapp.com/parse/"
         }))
+        if PFUser.current() != nil {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            // view controller currently being set in Storyboard as default will be overridden
+            window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "MainNavView")
+        }
         
         return true
     }

@@ -146,13 +146,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLI-Eb-eHQ">
-                                                    <rect key="frame" x="16" y="7" width="51.5" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="16" y="7" width="65" height="24"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1i9-pg-gmK">
-                                                    <rect key="frame" x="16" y="33" width="328" height="20.5"/>
+                                                    <rect key="frame" x="16" y="36" width="328" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -208,11 +208,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vyb-FD-R3M"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Chat" id="twC-fm-fVr"/>
+                    <navigationItem key="navigationItem" title="Chat" id="twC-fm-fVr">
+                        <barButtonItem key="leftBarButtonItem" title="Log out" id="NHV-aN-vsP">
+                            <connections>
+                                <action selector="logOut:" destination="lyK-Q4-SaZ" id="4w8-rB-5qu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="messageField" destination="KLo-MW-yro" id="PkP-VZ-uLg"/>
                         <outlet property="messageTable" destination="w5a-iF-A92" id="eXg-65-Eu7"/>
                         <outlet property="sendButton" destination="UsG-Fy-WNB" id="IBc-gQ-uzC"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="logoutSegue" id="mTl-O3-NPB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uuI-L8-JjQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -222,7 +229,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Imh-GL-KYt">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UcJ-m2-NLa" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainNavView" automaticallyAdjustsScrollViewInsets="NO" id="UcJ-m2-NLa" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fAk-p1-NDQ">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

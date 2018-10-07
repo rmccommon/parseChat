@@ -21,6 +21,7 @@ class mainViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         messageTable.dataSource = self
+        self.getMessage()
         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.getMessage), userInfo: nil, repeats: true)
         // Do any additional setup after loading the view.
     }
@@ -33,11 +34,9 @@ class mainViewController: UIViewController, UITableViewDataSource {
     @IBAction func sendMes(_ sender: Any) {
         let newMes = Message()
         newMes.author = PFUser.current()!
-        print(newMes.author)
         newMes.mess = messageField.text!
         newMes.saveInBackground(block: { (success, error) in
             if success {
-                print("The message was saved!")
             } else if let error = error {
                 print("Problem saving message: \(error.localizedDescription)")
             }
@@ -52,15 +51,13 @@ class mainViewController: UIViewController, UITableViewDataSource {
         let cell = messageTable.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath) as! messageCell
         if messages != []{
         let message = messages[indexPath.item]
-            let author = message. as? String
-            print(author ?? "")
-        cell.authorLabel.text = author
-            
+        let author = message.object(forKey: "author") as! PFUser
+        cell.authorLabel.text = author.username!
         cell.messageLabel.text = message.object(forKey: "mess") as? String
         }
-        
         return cell
     }
+    
     @objc func getMessage() {
         let query = Message.query()!
         query.includeKey("author")
@@ -76,6 +73,10 @@ class mainViewController: UIViewController, UITableViewDataSource {
         self.messageTable.reloadData()
     }
     
+    @IBAction func logOut(_ sender: Any) {
+        PFUser.logOutInBackground()
+        self.performSegue(withIdentifier: "logoutSegue", sender: nil)
+    }
     /*
     // MARK: - Navigation
      
