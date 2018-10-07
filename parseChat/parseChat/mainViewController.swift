@@ -33,7 +33,7 @@ class mainViewController: UIViewController, UITableViewDataSource {
     @IBAction func sendMes(_ sender: Any) {
         let newMes = Message()
         newMes.author = PFUser.current()!
-        print(newMes.author.username!)
+        print(newMes.author)
         newMes.mess = messageField.text!
         newMes.saveInBackground(block: { (success, error) in
             if success {
@@ -52,12 +52,10 @@ class mainViewController: UIViewController, UITableViewDataSource {
         let cell = messageTable.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath) as! messageCell
         if messages != []{
         let message = messages[indexPath.item]
-            let author = message.object(forKey: "author") as! PFUser
-            if author.username != nil{
-                cell.authorLabel.text = author.username
-            }else{
-                cell.authorLabel.text = ""
-            }
+            let author = message. as? String
+            print(author ?? "")
+        cell.authorLabel.text = author
+            
         cell.messageLabel.text = message.object(forKey: "mess") as? String
         }
         
@@ -65,6 +63,7 @@ class mainViewController: UIViewController, UITableViewDataSource {
     }
     @objc func getMessage() {
         let query = Message.query()!
+        query.includeKey("author")
         query.addDescendingOrder("createdAt")
         query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) -> Void in
             if let posts = posts {
