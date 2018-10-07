@@ -65,13 +65,27 @@ class loginViewController: UIViewController {
     }
     @IBAction func loginClick(_ sender: Any)
     {
+        if(usernameField.text! == "" || passwordField.text! == ""){
+            let misingInputalert = UIAlertController(title: "Missing Input", message: "Username or password is empty", preferredStyle: .alert)
+            let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                
+            }
+            misingInputalert.addAction(OKAction)
+            present(misingInputalert, animated: true)
+        }else{
         let usernameT = usernameField.text ?? ""
         let passwordT = passwordField.text ?? ""
         
         PFUser.logInWithUsername(inBackground: usernameT , password: passwordT)
         { (user: PFUser?, error: Error?) in
             if let error = error {
-                print("User log in failed: \(error.localizedDescription)")
+                let errorAlert = UIAlertController(title:"Error", message: error.localizedDescription, preferredStyle: .alert)
+                let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                    
+                }
+                errorAlert.addAction(OKAction)
+                
+                self.present(errorAlert, animated: true)
             } else {
                 print("User logged in successfully")
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
@@ -80,6 +94,7 @@ class loginViewController: UIViewController {
         }
         
         
+    }
     }
     
 }
